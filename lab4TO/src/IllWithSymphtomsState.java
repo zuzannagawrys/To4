@@ -4,7 +4,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class IllWithSymphtomsState implements State{
     private Person person;
     private Color color = Color.RED;
-
     private int duration;
 
     IllWithSymphtomsState()
@@ -34,7 +33,7 @@ public class IllWithSymphtomsState implements State{
     }
     public int generateDuration()
     {
-        int duration = ThreadLocalRandom.current().nextInt(20, 31);
+        int duration = ThreadLocalRandom.current().nextInt(100, 120);
         return duration;
     }
     public void decreaseDuration()
@@ -48,7 +47,8 @@ public class IllWithSymphtomsState implements State{
     }
 
     @Override
-    public void contact(Person someone) {
+    public void contact(Person someone)
+    {
         return;
     }
 

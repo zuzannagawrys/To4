@@ -1,7 +1,5 @@
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
-
 public class People {
     private ArrayList <Person> people;
     People(){
@@ -95,6 +93,7 @@ public class People {
             this.contacting(this.people.get(i));
             this.people.get(i).getSpeed().generateNewLocation();
 
+
         }
     }
     public void contacting(Person someone)
@@ -128,4 +127,22 @@ public class People {
     public ArrayList<Person> getPeople() {
         return people;
     }
+
+    public class Snapshot {
+        private ArrayList<Person> people;
+        Snapshot(ArrayList<Person> people)
+        {
+            this.people=people;
+        }
+        public ArrayList<Person> getPeople()
+        {
+            return this.people;
+        }
+    }
+    public Snapshot createSnapshot()
+    {
+        Snapshot snap = new Snapshot(this.people);
+        return snap;
+    }
+
 }

@@ -41,7 +41,7 @@ public class IllWithoutSymphtomsState implements State{
 
     public int generateDuration()
     {
-        int duration = ThreadLocalRandom.current().nextInt(500, 775);
+        int duration = ThreadLocalRandom.current().nextInt(100, 120);
         return duration;
     }
 
