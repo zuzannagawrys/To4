@@ -1,3 +1,8 @@
+import java.awt.*;
+
 public interface State {
-    public void contact(Pearson someone);
+    void contact(Person someone);
+
+    Color getColor();
+    void decreaseDuration();
 }
